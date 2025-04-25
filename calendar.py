@@ -13,7 +13,7 @@ def save_events(data):
     with open(EVENT_FILE, "w") as f:
         json.dump(data, f, indent=4)
 
-def get_user_events(username):
+def get_user_events(username="default_user"):
     data = load_events()
     return data.get(username, [])
 
@@ -27,6 +27,3 @@ def delete_event(username, index):
     if username in data and 0 <= index < len(data[username]):
         data[username].pop(index)
         save_events(data)
-
-def get_all_events():
-    return load_events()

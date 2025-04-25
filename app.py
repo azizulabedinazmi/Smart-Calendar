@@ -1,6 +1,5 @@
 import streamlit as st
 # filepath: g:\Smart Calendar\app.py
-from calendar import add_event, get_user_events, delete_event
 from assistant import answer_query
 from datetime import datetime
 from streamlit_calendar import calendar
